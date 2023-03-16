@@ -27,7 +27,7 @@ const richiesta = url => {
       deleteButton.forEach(bottone => {
         bottone.addEventListener("click", event => {
           event.preventDefault();
-          event.target.closest(".col").remove();
+          event.target.closest(".col-md-4").remove();
         });
       });
     })
