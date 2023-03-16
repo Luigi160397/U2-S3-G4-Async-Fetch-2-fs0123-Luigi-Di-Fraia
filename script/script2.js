@@ -1,4 +1,4 @@
-const createCard = (title, author, imgs, id) => {
+const createCard = (title, author, imgs, photographer_url) => {
   const row = document.querySelector("#row");
   const col = document.createElement("div");
   col.setAttribute("class", "col");
@@ -11,7 +11,7 @@ const createCard = (title, author, imgs, id) => {
           <h5 class="card-title">${title}</h5>
           <p class="card-text">Ph: ${author}</p>
           <div class="d-flex justify-content-between align-items-center">
-            <small class="text-muted">${id}</small>
+            <a class='text-muted' href="${photographer_url}"><small>${photographer_url}</small></a>
           </div>
         </div>
       </div>
@@ -30,8 +30,7 @@ window.onload = () => {
   })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
-      createCard(data.alt, data.photographer, data.src.medium, data.id);
+      createCard(data.alt, data.photographer, data.src.medium, data.photographer_url);
     })
     .catch(error => console.log(error));
 };
