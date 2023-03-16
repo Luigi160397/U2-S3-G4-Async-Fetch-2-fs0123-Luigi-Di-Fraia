@@ -11,7 +11,7 @@ const createCard = (title, author, imgs, photographer_url) => {
           <h5 class="card-title">${title}</h5>
           <p class="card-text">Ph: ${author}</p>
           <div class="d-flex justify-content-between align-items-center">
-            <a class='text-muted' href="${photographer_url}"><small>${photographer_url}</small></a>
+            <a class='text-muted' href="${photographer_url} target="_blank"><small>${photographer_url}</small></a>
           </div>
         </div>
       </div>
