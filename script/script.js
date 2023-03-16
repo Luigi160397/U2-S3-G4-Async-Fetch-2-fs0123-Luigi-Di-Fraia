@@ -1,17 +1,13 @@
 const bottone1 = document.querySelector(".bottone1");
 const bottone2 = document.querySelector(".bottone2");
 
-const richiesta1 = () => {
+bottone1.addEventListener("click", () => {
   richiesta("https://api.pexels.com/v1/search?query=nature");
-};
+});
 
-const richiesta2 = () => {
+bottone2.addEventListener("click", () => {
   richiesta("https://api.pexels.com/v1/search?query=ocean");
-};
-
-bottone1.addEventListener("click", richiesta1);
-
-bottone2.addEventListener("click", richiesta2);
+});
 
 const richiesta = url => {
   fetch(url, {
@@ -41,7 +37,7 @@ const richiesta = url => {
 const createCard = (title, author, imgs, id) => {
   const row = document.querySelector(".album .container .row");
   const col = document.createElement("div");
-  col.setAttribute("class", "col md-4");
+  col.setAttribute("class", "col");
   row.appendChild(col);
 
   col.innerHTML = `<div class="card mb-4 shadow-sm">
