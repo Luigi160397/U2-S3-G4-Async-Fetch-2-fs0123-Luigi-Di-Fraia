@@ -37,7 +37,7 @@ const richiesta = url => {
 const createCard = (title, author, imgs, id) => {
   const row = document.querySelector(".album .container .row");
   const col = document.createElement("div");
-  col.setAttribute("class", "col");
+  col.setAttribute("class", "col-md-4");
   row.appendChild(col);
 
   col.innerHTML = `<div class="card mb-4 shadow-sm">
